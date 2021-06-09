@@ -48,7 +48,7 @@ setup_db() {
 
 print_welcome_page
 
-if [ "${1}" == "php" ] && [ "$2" == "-v" ]; then
+if [ "${1}" == "php" ] && [ "${2}" == "-v" ]; then
     if [[ ! -d /app/app ]]; then
         log "Regenerating APP_KEY"
         php artisan key:generate --ansi

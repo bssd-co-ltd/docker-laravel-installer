@@ -8,9 +8,10 @@ RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install pdo_mysql 
 
 RUN usermod -u 1000 www-data
+
 RUN mkdir -p /var/www/.composer
+RUN mkdir -p /app 
 RUN chown -R www-data:www-data /var/www/.composer
-RUN mkdir /app 
 RUN chown -R www-data:www-data /app
 
 USER www-data
